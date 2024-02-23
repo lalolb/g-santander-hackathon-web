@@ -1,0 +1,13 @@
+<div style="display: flex; justify-content: space-between">
+  <div>
+    <strong>{{ serviceToTest.name }}</strong>
+    <p>{{ serviceToTest.route }}</p>
+  </div>
+  <div [ngClass]="isActive ? 'is-active' : 'is-inactive'">
+    <i
+      class="ti"
+      [ngClass]="isActive ? 'ti-plug-connected' : 'ti-plug-connected-x'"
+    ></i>
+    {{ serviceHttpCode }} - {{ serviceStatus }}
+  </div>
+</div>
